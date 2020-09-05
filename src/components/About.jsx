@@ -2,9 +2,9 @@ import React from "react"
 
 const About = () => {
   return (
-    <div class="container is-widescreen">
-      <h2 class="is-size-1 has-text-weight-bold mt-6 mb-6">About Me</h2>
-      <div className="columns is-vcentered mb-6">
+    <div class="container is-widescreen pt-6 pb-6">
+      <h2 class="is-size-1 has-text-weight-bold mb-6">About Me</h2>
+      <div className="columns is-vcentered">
         <div className="column is-one-quarter">
           <figure class="image is-1by1">
             <img
