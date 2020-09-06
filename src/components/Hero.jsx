@@ -1,8 +1,9 @@
 import React from "react"
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const Hero = () => {
   return (
-    <section className="hero is-primary is-fullheight">
+    <section id="hero" className="hero is-primary is-fullheight">
       <div className="hero-head">
         <header className="navbar">
           <div className="container">
@@ -15,10 +16,9 @@ const Hero = () => {
             </div>
             <div id="navbarMenuHeroC" className="navbar-menu">
               <div className="navbar-end">
-                <a className="navbar-item">About</a>
-                <a className="navbar-item">Projects</a>
-                <a className="navbar-item">Education</a>
-                <a className="navbar-item">Contact</a>
+                <a className="navbar-item" onClick={() => scrollTo('#about')}>About</a>
+                <a className="navbar-item" onClick={() => scrollTo('#projects')}>Projects</a>
+                <a className="navbar-item" onClick={() => scrollTo('#skills')}>Skills</a>
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@ import React from "react"
 
 const About = () => {
   return (
-    <section className="pt-6 pb-6">
+    <section id="about" className="pt-6 pb-6">
       <div className="container is-widescreen">
         <h2 className="is-size-1 has-text-weight-bold mb-6">About Me</h2>
         <div className="columns is-vcentered">

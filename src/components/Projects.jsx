@@ -2,7 +2,7 @@ import React from "react"
 
 const Projects = () => {
   return (
-    <section className="has-background-success has-text-white pt-6 pb-6">
+    <section id="projects" className="has-background-success has-text-white pt-6 pb-6">
       <div className="container">
         <h2 className="is-size-1 has-text-weight-bold mb-6">My Projects</h2>
         <div className="columns">
