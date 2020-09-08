@@ -19,6 +19,7 @@ const Hero = () => {
                 <a className="navbar-item" onClick={() => scrollTo('#about')}>About</a>
                 <a className="navbar-item" onClick={() => scrollTo('#projects')}>Projects</a>
                 <a className="navbar-item" onClick={() => scrollTo('#skills')}>Skills</a>
+                <a className="navbar-item" onClick={() => scrollTo('#education')}>Education</a>
               </div>
             </div>
           </div>
