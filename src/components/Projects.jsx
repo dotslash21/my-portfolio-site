@@ -4,8 +4,9 @@ const Projects = () => {
   return (
     <section id="projects" className="has-background-white-ter pt-6 pb-6">
       <div className="container">
-        <h2 className="is-size-1 has-text-weight-bold mb-6">My Projects</h2>
-        <div className="columns is-multiline is-mobile">
+        <h2 className="is-size-1 has-text-weight-bold has-text-centered mb-6">My Projects</h2>
+
+        <div className="columns is-multiline">
           <div className="column is-one-quarter">
             <div className="card">
               <div className="card-image">

@@ -5,9 +5,9 @@ const About = ({ image, bio }) => {
   return (
     <section id="about" className="pt-6 pb-6">
       <div className="container is-widescreen">
-        <h2 className="is-size-1 has-text-weight-bold mb-6">About Me</h2>
-        <div className="columns is-vcentered">
-          <div className="column is-one-quarter">
+        <h2 className="is-size-1 has-text-weight-bold has-text-centered mb-6">About Me</h2>
+        <div className="columns is-vcentered is-centered">
+          <div className="column is-narrow">
             <Img
               className="rounded"
               fixed={image}
@@ -24,8 +24,9 @@ const About = ({ image, bio }) => {
               }}
             />
           </div>
-          <div className="column">
-            <p className="is-size-3 ml-6">{bio}</p>
+
+          <div className="column is-half">
+            <p className="is-size-3 has-text-justified ml-6">{bio}</p>
           </div>
         </div>
       </div>
