@@ -5,7 +5,7 @@ const Hero = ({ title, subtitle }) => {
   return (
     <section id="hero" className="hero is-fullheight is-primary">
       <div className="hero-head">
-        <header className="navbar">
+        <nav className="navbar">
           <div className="container">
             <div className="navbar-brand">
               <span
@@ -43,20 +43,28 @@ const Hero = ({ title, subtitle }) => {
               </div>
             </div>
           </div>
-        </header>
+        </nav>
       </div>
 
       <div className="hero-body">
         <div className="container">
           <h1 className="title is-uppercase is-size-1">{title}</h1>
           <h2 className="subtitle is-capitalized is-size-3">{subtitle}</h2>
+          <div>
           <a
-            className="button is-link is-inverted is-outlined is-large"
-            href="https://drive.google.com/file/d/1QdnkPD9lAZkGZYnKOIBQRbBhSVtmYBQ1/view?usp=sharing"
-            target="_blank"
-          >
-            Download Resume
-          </a>
+              className="button is-link is-inverted is-outlined is-large mr-1"
+              href="https://drive.google.com/file/d/1QdnkPD9lAZkGZYnKOIBQRbBhSVtmYBQ1/view?usp=sharing"
+              target="_blank"
+            >
+              Download Resume
+            </a>
+            <a
+              className="button is-inverted has-text-primary is-large ml-1"
+              onClick={() => scrollTo("#contact")}
+            >
+              Hire Me
+            </a>
+          </div>
         </div>
       </div>
 
