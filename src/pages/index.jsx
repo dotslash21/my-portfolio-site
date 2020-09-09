@@ -16,7 +16,7 @@ export default function Home({ data }) {
         title={data.site.siteMetadata.name}
         subtitle={data.site.siteMetadata.role}
       />
-      <About />
+      <About image={data.file.childImageSharp.fixed} bio={data.site.siteMetadata.bio} />
       <Projects />
       <Skills />
       <Education />
@@ -32,6 +32,14 @@ export const query = graphql`
       siteMetadata {
         name
         role
+        bio
+      }
+    },
+    file(relativePath: { eq: "about/headshot.jpg" }) {
+      childImageSharp {
+        fixed(width: 250, height: 250) {
+          ...GatsbyImageSharpFixed
+        }
       }
     }
   }
