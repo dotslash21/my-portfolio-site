@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 
 import Hero from "../components/Hero"
 import About from "../components/About"
@@ -8,10 +9,13 @@ import Education from "../components/Education"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <>
-      <Hero />
+      <Hero
+        title={data.site.siteMetadata.name}
+        subtitle={data.site.siteMetadata.role}
+      />
       <About />
       <Projects />
       <Skills />
@@ -21,3 +25,14 @@ export default function Home() {
     </>
   )
 }
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        name
+        role
+      }
+    }
+  }
+`

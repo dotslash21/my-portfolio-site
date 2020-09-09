@@ -5,6 +5,9 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    name: `Arunangshu Biswas`,
+    role: `Full Stack Developer`,
+  },
   plugins: [`gatsby-plugin-sass`, `gatsby-plugin-smoothscroll`],
 }
