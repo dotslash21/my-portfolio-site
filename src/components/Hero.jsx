@@ -3,7 +3,7 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const Hero = () => {
   return (
-    <section id="hero" className="hero is-primary is-fullheight">
+    <section id="hero" className="hero is-fullheight is-primary">
       <div className="hero-head">
         <header className="navbar">
           <div className="container">

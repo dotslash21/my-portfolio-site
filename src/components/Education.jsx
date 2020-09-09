@@ -2,7 +2,7 @@ import React from "react"
 
 const Education = () => {
   return (
-    <section id="education" className="has-background-warning pt-6 pb-6">
+    <section id="education" className="has-background-white-ter pt-6 pb-6">
       <div className="container is-widescreen">
         <h2 className="is-size-1 has-text-weight-bold mb-6">My Education</h2>
 
