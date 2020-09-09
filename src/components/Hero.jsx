@@ -51,20 +51,24 @@ const Hero = ({ title, subtitle }) => {
         <div className="container">
           <h1 className="title is-uppercase is-size-1">{title}</h1>
           <h2 className="subtitle is-capitalized is-size-3">{subtitle}</h2>
-          <div>
-            <a
-              className="button is-link is-inverted is-outlined is-large mr-1"
-              href="https://drive.google.com/file/d/1QdnkPD9lAZkGZYnKOIBQRbBhSVtmYBQ1/view?usp=sharing"
-              target="_blank"
-            >
-              Download Resume
-            </a>
-            <a
-              className="button is-inverted has-text-primary is-large ml-1"
-              onClick={() => scrollTo("#contact")}
-            >
-              Hire Me
-            </a>
+          <div className="field is-grouped">
+            <p className="control">
+              <a
+                className="button is-link is-inverted is-outlined is-large"
+                href="https://drive.google.com/file/d/1QdnkPD9lAZkGZYnKOIBQRbBhSVtmYBQ1/view?usp=sharing"
+                target="_blank"
+              >
+                Download Resume
+              </a>
+            </p>
+            <p className="control">
+              <a
+                className="button is-inverted has-text-primary is-large"
+                onClick={() => scrollTo("#contact")}
+              >
+                Hire Me
+              </a>
+            </p>
           </div>
         </div>
       </div>
