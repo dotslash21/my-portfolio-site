@@ -1,77 +1,37 @@
 import React from "react"
-import { FaGithub, FaLinkedinIn, FaFacebook, FaTwitter } from "react-icons/fa"
+import SocialMenu from "./SocialLinks"
 
-const Contact = () => {
+const Contact = ({ email, socialLinks }) => {
   return (
     <section id="contact" className="pt-6 pb-6">
       <div className="container">
-        <h2 className="is-size-1 has-text-weight-bold has-text-centered mb-6">Contact Me</h2>
+        <h2 className="is-size-1 has-text-weight-bold has-text-centered mb-6">
+          Contact Me
+        </h2>
 
         <div className="columns is-centered">
-          <div className="column is-one-quarter">
-            <h3 className="is-size-2">E-Mail me at</h3>
-            <p className="is-size-4">
-              <a href="mailto:arunangshubsws@gmail.com">
-                arunangshubsws@gmail.com
-              </a>
-            </p>
+          {(email || socialLinks) && (
+            <div className="column is-one-quarter">
+              {email && (
+                <>
+                  <h3 className="is-size-2">E-Mail me at</h3>
+                  <p className="is-size-4">
+                    <a href={`mailto:${email}`}>{email}</a>
+                  </p>
+                </>
+              )}
 
-            <h3 className="is-size-2 mt-6 mb-3">Connect with me</h3>
-            <p className="is-size-4">
-              <div className="field is-grouped">
-                <p className="control">
-                  <a
-                    className="button is-link is-outlined is-medium"
-                    href="https://github.com/dotslash21"
-                    target="_blank"
-                  >
-                    <span className="icon is-medium">
-                      <FaGithub className="is-size-1" />
-                    </span>
-                  </a>
-                </p>
-
-                <p className="control">
-                  <a
-                    className="button is-link is-outlined is-medium"
-                    href="https://www.linkedin.com/in/arunangshubsws/"
-                    target="_blank"
-                  >
-                    <span className="icon is-medium">
-                      <FaLinkedinIn className="is-size-1" />
-                    </span>
-                  </a>
-                </p>
-
-                <p className="control">
-                  <a
-                    className="button is-link is-outlined is-medium"
-                    href="https://www.facebook.com/itsmearunangshu"
-                    target="_blank"
-                  >
-                    <span className="icon is-medium">
-                      <FaFacebook className="is-size-1" />
-                    </span>
-                  </a>
-                </p>
-
-                <p className="control">
-                  <a
-                    className="button is-link is-outlined is-medium"
-                    href="https://twitter.com/arunangshubsws"
-                    target="_blank"
-                  >
-                    <span className="icon is-medium">
-                      <FaTwitter className="is-size-1" />
-                    </span>
-                  </a>
-                </p>
-              </div>
-            </p>
-          </div>
+              {socialLinks && (
+                <>
+                  <h3 className="is-size-2 mt-6 mb-3">Connect with me</h3>
+                  <SocialMenu socialLinks={socialLinks} isInverted={false} />
+                </>
+              )}
+            </div>
+          )}
 
           <div className="column is-narrow">
-          <h3 className="is-size-2 mb-3">Feel free to drop a message</h3>
+            <h3 className="is-size-2 mb-3">Feel free to drop a message</h3>
             <form>
               <div className="field">
                 <label className="label">Name</label>

@@ -18,11 +18,17 @@ export default function Home({ data }) {
         resumeLink={data.site.siteMetadata.resumeLink}
         socialLinks={data.site.siteMetadata.socialLinks}
       />
-      <About image={data.file.childImageSharp.fixed} bio={data.site.siteMetadata.bio} />
+      <About
+        image={data.file.childImageSharp.fixed}
+        bio={data.site.siteMetadata.bio}
+      />
       <Projects />
       <Skills />
       <Education />
-      <Contact />
+      <Contact
+        email={data.site.siteMetadata.email}
+        socialLinks={data.site.siteMetadata.socialLinks}
+      />
       <Footer />
     </>
   )
@@ -35,6 +41,7 @@ export const query = graphql`
         name
         role
         bio
+        email
         resumeLink
         socialLinks {
           github
@@ -43,7 +50,7 @@ export const query = graphql`
           twitter
         }
       }
-    },
+    }
     file(relativePath: { eq: "headshot.jpg" }) {
       childImageSharp {
         fixed(width: 250, height: 250) {

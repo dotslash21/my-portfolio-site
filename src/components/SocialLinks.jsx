@@ -1,13 +1,17 @@
 import React from "react"
 import { FaGithub, FaLinkedinIn, FaFacebook, FaTwitter } from "react-icons/fa"
 
-const SocialMenu = ({ socialLinks }) => {
+const SocialMenu = ({ socialLinks, isInverted = true }) => {
+  const buttonClasses = `button is-link ${
+    isInverted ? "is-inverted" : ""
+  } is-outlined is-medium`
+
   return (
     <div className="field is-grouped">
       {socialLinks.github && (
         <p className="control">
           <a
-            className="button is-link is-inverted is-outlined is-medium"
+            className={buttonClasses}
             href={socialLinks.github}
             target="_blank"
             rel="noreferrer"
@@ -22,7 +26,7 @@ const SocialMenu = ({ socialLinks }) => {
       {socialLinks.linkedin && (
         <p className="control">
           <a
-            className="button is-link is-inverted is-outlined is-medium"
+            className={buttonClasses}
             href={socialLinks.linkedin}
             target="_blank"
             rel="noreferrer"
@@ -37,7 +41,7 @@ const SocialMenu = ({ socialLinks }) => {
       {socialLinks.facebook && (
         <p className="control">
           <a
-            className="button is-link is-inverted is-outlined is-medium"
+            className={buttonClasses}
             href={socialLinks.facebook}
             target="_blank"
             rel="noreferrer"
@@ -52,7 +56,7 @@ const SocialMenu = ({ socialLinks }) => {
       {socialLinks.twitter && (
         <p className="control">
           <a
-            className="button is-link is-inverted is-outlined is-medium"
+            className={buttonClasses}
             href={socialLinks.twitter}
             target="_blank"
             rel="noreferrer"
