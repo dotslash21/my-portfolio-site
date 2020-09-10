@@ -17,12 +17,22 @@ const ProjectItem = ({ image, title, description, preview, code }) => {
 
         <div className="card-footer">
           {preview && (
-            <a href={preview} className="card-footer-item">
+            <a
+              href={preview}
+              className="card-footer-item"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaEye className="is-size-4" />
             </a>
           )}
           {code && (
-            <a href={code} className="card-footer-item">
+            <a
+              href={code}
+              className="card-footer-item"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaCode className="is-size-4" />
             </a>
           )}
