@@ -5,7 +5,7 @@ const Skills = () => {
   return (
     <section id="skills" className="pt-6 pb-6">
       <div className="container">
-        <h2 class="is-size-1 has-text-weight-bold has-text-centered mb-6">
+        <h2 className="is-size-1 has-text-weight-bold has-text-centered mb-6">
           My Skillset
         </h2>
 
