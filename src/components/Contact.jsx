@@ -76,9 +76,9 @@ const Contact = ({ email, socialLinks }) => {
 
               <div className="field is-grouped is-grouped-centered">
                 <p className="control">
-                  <a className="button is-primary" type="submit">
+                  <button className="button is-primary" type="submit">
                     Submit
-                  </a>
+                  </button>
                 </p>
               </div>
             </form>
