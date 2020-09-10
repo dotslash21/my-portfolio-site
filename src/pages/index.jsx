@@ -51,7 +51,7 @@ export const query = graphql`
         }
       }
     }
-    file(relativePath: { eq: "assets/images/headshot.jpg" }) {
+    file(relativePath: { eq: "images/headshot.jpg" }) {
       childImageSharp {
         fixed(width: 250, height: 250) {
           ...GatsbyImageSharpFixed
