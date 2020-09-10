@@ -41,7 +41,7 @@ const Projects = () => {
           My Projects
         </h2>
 
-        <div className="columns is-multiline">
+        <div className="columns is-centered is-multiline">
           {data.allFile.nodes.map(item => (
             <div className="column is-one-quarter" key={item.childMarkdownRemark.id}>
               <ProjectItem
