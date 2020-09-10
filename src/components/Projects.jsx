@@ -1,5 +1,5 @@
 import React from "react"
-import { FaEye, FaCode } from "react-icons/fa"
+import ProjectItem from "./ProjectItem"
 
 const Projects = () => {
   return (
@@ -11,107 +11,41 @@ const Projects = () => {
 
         <div className="columns is-multiline">
           <div className="column is-one-quarter">
-            <div className="card">
-              <div className="card-image">
-                <figure className="image is-4by3">
-                  <img
-                    src="https://bulma.io/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                  />
-                </figure>
-              </div>
-              <div className="card-content">
-                <p className="title">PROJECT 1</p>
-                <p className="subtitle">Lorem Ipsum Dolor Sit Amet</p>
-              </div>
-
-              <div className="card-footer">
-                <a href="#" className="card-footer-item">
-                  <FaEye className="is-size-4" />
-                </a>
-                <a href="#" className="card-footer-item">
-                  <FaCode className="is-size-4" />
-                </a>
-              </div>
-            </div>
+            <ProjectItem
+              image="https://bulma.io/images/placeholders/1280x960.png"
+              title="Project 1"
+              description="Lorem Ipsum Dolor Sit Amet"
+              preview="#"
+              code="#"
+            />
           </div>
 
           <div className="column is-one-quarter">
-            <div className="card">
-              <div className="card-image">
-                <figure className="image is-4by3">
-                  <img
-                    src="https://bulma.io/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                  />
-                </figure>
-              </div>
-              <div className="card-content">
-                <p className="title">PROJECT 2</p>
-                <p className="subtitle">Lorem Ipsum Dolor Sit Amet</p>
-              </div>
-
-              <div className="card-footer">
-                <a href="#" className="card-footer-item">
-                  <FaEye className="is-size-4" />
-                </a>
-                <a href="#" className="card-footer-item">
-                  <FaCode className="is-size-4" />
-                </a>
-              </div>
-            </div>
+            <ProjectItem
+              image="https://bulma.io/images/placeholders/1280x960.png"
+              title="Project 2"
+              description="Lorem Ipsum Dolor Sit Amet"
+              preview="#"
+              code="#"
+            />
           </div>
 
           <div className="column is-one-quarter">
-            <div className="card">
-              <div className="card-image">
-                <figure className="image is-4by3">
-                  <img
-                    src="https://bulma.io/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                  />
-                </figure>
-              </div>
-              <div className="card-content">
-                <p className="title">PROJECT 3</p>
-                <p className="subtitle">Lorem Ipsum Dolor Sit Amet</p>
-              </div>
-
-              <div className="card-footer">
-                <a href="#" className="card-footer-item">
-                  <FaEye className="is-size-4" />
-                </a>
-                <a href="#" className="card-footer-item">
-                  <FaCode className="is-size-4" />
-                </a>
-              </div>
-            </div>
+            <ProjectItem
+              image="https://bulma.io/images/placeholders/1280x960.png"
+              title="Project 3"
+              description="Lorem Ipsum Dolor Sit Amet"
+              preview="#"
+            />
           </div>
 
           <div className="column is-one-quarter">
-            <div className="card">
-              <div className="card-image">
-                <figure className="image is-4by3">
-                  <img
-                    src="https://bulma.io/images/placeholders/1280x960.png"
-                    alt="Placeholder image"
-                  />
-                </figure>
-              </div>
-              <div className="card-content">
-                <p className="title">PROJECT 4</p>
-                <p className="subtitle">Lorem Ipsum Dolor Sit Amet</p>
-              </div>
-
-              <div className="card-footer">
-                <a href="#" className="card-footer-item">
-                  <FaEye className="is-size-4" />
-                </a>
-                <a href="#" className="card-footer-item">
-                  <FaCode className="is-size-4" />
-                </a>
-              </div>
-            </div>
+            <ProjectItem
+              image="https://bulma.io/images/placeholders/1280x960.png"
+              title="Project 4"
+              description="Lorem Ipsum Dolor Sit Amet"
+              code="#"
+            />
           </div>
         </div>
       </div>
