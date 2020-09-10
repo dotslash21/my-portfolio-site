@@ -8,9 +8,9 @@ media_folder: "content/assets/images"
 public_folder: "/assets/images"
 
 collections:
-  - label: "Projects"
-    name: "projects"
-    folder: "content/projects"
+  - label: "Project"
+    name: "project"
+    folder: "content/project"
     create: true
     slug: "{{slug}}"
     fields:
