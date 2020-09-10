@@ -34,33 +34,42 @@ const Contact = ({ email, socialLinks }) => {
             <h3 className="is-size-2 mb-3">Feel free to drop a message</h3>
             <form>
               <div className="field">
-                <label className="label">Name</label>
+                <label htmlFor="name" className="label">
+                  Name
+                </label>
                 <div className="control">
                   <input
-                    className="input"
                     type="text"
-                    placeholder="Text input"
+                    name="name"
+                    className="input"
+                    placeholder="Your name"
                   />
                 </div>
               </div>
 
               <div className="field">
-                <label className="label">Email</label>
+                <label htmlFor="email" className="label">
+                  Email
+                </label>
                 <div className="control">
                   <input
-                    className="input"
                     type="email"
-                    placeholder="Email input"
+                    name="email"
+                    className="input"
+                    placeholder="Your email"
                   />
                 </div>
               </div>
 
               <div className="field">
-                <label className="label">Message</label>
+                <label htmlFor="message" className="label">
+                  Message
+                </label>
                 <div className="control">
                   <textarea
+                    name="message"
                     className="textarea"
-                    placeholder="Textarea"
+                    placeholder="Please leave your message here"
                   ></textarea>
                 </div>
               </div>
