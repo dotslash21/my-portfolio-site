@@ -18,31 +18,60 @@ const Hero = ({ title, subtitle, resumeLink, socialLinks }) => {
                 <span></span>
               </span>
             </div>
-            <div id="navbarMenuHeroC" className="navbar-menu">
+            <nav id="navbarMenuHeroC" className="navbar-menu">
               <div className="navbar-end">
-                <a className="navbar-item" onClick={() => scrollTo("#about")}>
+                <a
+                  className="navbar-item"
+                  onClick={e => {
+                    scrollTo("#about")
+                    e.preventDefault()
+                  }}
+                  href="#about"
+                >
                   About
                 </a>
                 <a
                   className="navbar-item"
-                  onClick={() => scrollTo("#projects")}
+                  onClick={e => {
+                    scrollTo("#projects")
+                    e.preventDefault()
+                  }}
+                  href="#projects"
                 >
                   Projects
                 </a>
-                <a className="navbar-item" onClick={() => scrollTo("#skills")}>
+                <a
+                  className="navbar-item"
+                  onClick={e => {
+                    scrollTo("#skills")
+                    e.preventDefault()
+                  }}
+                  href="#skills"
+                >
                   Skills
                 </a>
                 <a
                   className="navbar-item"
-                  onClick={() => scrollTo("#education")}
+                  onClick={e => {
+                    scrollTo("#education")
+                    e.preventDefault()
+                  }}
+                  href="#education"
                 >
                   Education
                 </a>
-                <a className="navbar-item" onClick={() => scrollTo("#contact")}>
+                <a
+                  className="navbar-item"
+                  onClick={e => {
+                    scrollTo("#contact")
+                    e.preventDefault()
+                  }}
+                  href="#contact"
+                >
                   Contact
                 </a>
               </div>
-            </div>
+            </nav>
           </div>
         </nav>
       </div>
@@ -62,18 +91,19 @@ const Hero = ({ title, subtitle, resumeLink, socialLinks }) => {
                   className="button is-link is-inverted is-outlined is-large"
                   href={resumeLink}
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Download Resume
                 </a>
               </p>
             )}
             <p className="control">
-              <a
+              <button
                 className="button is-inverted has-text-primary is-large"
                 onClick={() => scrollTo("#contact")}
               >
                 Hire Me
-              </a>
+              </button>
             </p>
           </div>
         </div>
