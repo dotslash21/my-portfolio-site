@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+  branch: master
+
+publish_mode: editorial_workflow
+
+media_folder: "content/assets/images"
+public_folder: "/assets/images"
+
+collections:
+  - label: "Projects"
+    name: "projects"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Preview link", name: "preview_link", widget: "string" }
+      - { label: "Code link", name: "code_link", widget: "string" }
+      - { lavel: "Thumbnail", name: "thumbnail", widget: "image" }

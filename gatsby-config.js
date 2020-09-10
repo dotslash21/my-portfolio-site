@@ -28,7 +28,8 @@ module.exports = {
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
-      options: { path: `content/assets/` },
+      options: { path: `content/assets/images/` },
     },
+    `gatsby-plugin-netlify-cms`
   ],
 }
