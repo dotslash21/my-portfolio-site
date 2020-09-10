@@ -28,7 +28,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
-      options: { path: `./static/images/` },
+      options: { path: `content/assets/` },
     },
   ],
 }
