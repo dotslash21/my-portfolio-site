@@ -28,8 +28,29 @@ module.exports = {
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
-      options: { path: `content/assets/images/` },
+      options: { name: `assets`, path: `content/assets` },
     },
-    `gatsby-plugin-netlify-cms`
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: { name: `project`, path: `content/project` },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              staticFolderName: 'content',
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {},
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-netlify-cms`,
   ],
 }
