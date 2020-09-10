@@ -34,6 +34,23 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: { name: `project`, path: `content/project` },
     },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-relative-images`,
+            options: {
+              staticFolderName: 'content',
+            }
+          },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {},
+          },
+        ],
+      },
+    },
     `gatsby-plugin-netlify-cms`,
   ],
 }
