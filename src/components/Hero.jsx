@@ -1,8 +1,8 @@
 import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
-import { FaGithub, FaLinkedinIn, FaFacebook, FaTwitter } from "react-icons/fa"
+import SocialMenu from "./SocialLinks"
 
-const Hero = ({ title, subtitle }) => {
+const Hero = ({ title, subtitle, resumeLink, socialLinks }) => {
   return (
     <section id="hero" className="hero is-fullheight is-primary">
       <div className="hero-head">
@@ -49,18 +49,24 @@ const Hero = ({ title, subtitle }) => {
 
       <div className="hero-body">
         <div className="container">
-          <h1 className="title is-uppercase is-size-1">{title}</h1>
-          <h2 className="subtitle is-capitalized is-size-3">{subtitle}</h2>
+          <h1 className="title is-uppercase is-size-1">
+            {title || `John Smith`}
+          </h1>
+          <h2 className="subtitle is-capitalized is-size-3">
+            {subtitle || `The Developer`}
+          </h2>
           <div className="field is-grouped">
-            <p className="control">
-              <a
-                className="button is-link is-inverted is-outlined is-large"
-                href="https://drive.google.com/file/d/1QdnkPD9lAZkGZYnKOIBQRbBhSVtmYBQ1/view?usp=sharing"
-                target="_blank"
-              >
-                Download Resume
-              </a>
-            </p>
+            {resumeLink && (
+              <p className="control">
+                <a
+                  className="button is-link is-inverted is-outlined is-large"
+                  href={resumeLink}
+                  target="_blank"
+                >
+                  Download Resume
+                </a>
+              </p>
+            )}
             <p className="control">
               <a
                 className="button is-inverted has-text-primary is-large"
@@ -73,61 +79,15 @@ const Hero = ({ title, subtitle }) => {
         </div>
       </div>
 
-      <div className="hero-foot">
-        <div className="level">
-          <div className="level-item py-5">
-            <div className="field is-grouped">
-              <p className="control">
-                <a
-                  className="button is-link is-inverted is-outlined is-medium"
-                  href="https://github.com/dotslash21"
-                  target="_blank"
-                >
-                  <span className="icon is-medium">
-                    <FaGithub className="is-size-1" />
-                  </span>
-                </a>
-              </p>
-
-              <p className="control">
-                <a
-                  className="button is-link is-inverted is-outlined is-medium"
-                  href="https://www.linkedin.com/in/arunangshubsws/"
-                  target="_blank"
-                >
-                  <span className="icon is-medium">
-                    <FaLinkedinIn className="is-size-1" />
-                  </span>
-                </a>
-              </p>
-
-              <p className="control">
-                <a
-                  className="button is-link is-inverted is-outlined is-medium"
-                  href="https://www.facebook.com/itsmearunangshu"
-                  target="_blank"
-                >
-                  <span className="icon is-medium">
-                    <FaFacebook className="is-size-1" />
-                  </span>
-                </a>
-              </p>
-
-              <p className="control">
-                <a
-                  className="button is-link is-inverted is-outlined is-medium"
-                  href="https://twitter.com/arunangshubsws"
-                  target="_blank"
-                >
-                  <span className="icon is-medium">
-                    <FaTwitter className="is-size-1" />
-                  </span>
-                </a>
-              </p>
+      {socialLinks && (
+        <div className="hero-foot">
+          <div className="level">
+            <div className="level-item py-5">
+              <SocialMenu socialLinks={socialLinks} />
             </div>
           </div>
         </div>
-      </div>
+      )}
     </section>
   )
 }

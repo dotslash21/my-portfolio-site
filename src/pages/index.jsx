@@ -15,6 +15,8 @@ export default function Home({ data }) {
       <Hero
         title={data.site.siteMetadata.name}
         subtitle={data.site.siteMetadata.role}
+        resumeLink={data.site.siteMetadata.resumeLink}
+        socialLinks={data.site.siteMetadata.socialLinks}
       />
       <About image={data.file.childImageSharp.fixed} bio={data.site.siteMetadata.bio} />
       <Projects />
@@ -33,6 +35,13 @@ export const query = graphql`
         name
         role
         bio
+        resumeLink
+        socialLinks {
+          github
+          linkedin
+          facebook
+          twitter
+        }
       }
     },
     file(relativePath: { eq: "headshot.jpg" }) {
