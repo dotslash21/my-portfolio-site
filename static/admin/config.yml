@@ -23,7 +23,8 @@ collections:
     name: "skill"
     folder: "content/skill"
     create: true
-    slug: "{{slug}}"
+    slug: "{{fields.slug}}"
     fields:
+      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Rating", name: "rating", widget: "number", value_type: "int", min: 0, max: 100 }
