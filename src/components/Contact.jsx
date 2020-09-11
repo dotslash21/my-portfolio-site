@@ -76,7 +76,14 @@ const Contact = ({ email, socialLinks }) => {
 
               <div className="field is-grouped is-grouped-centered">
                 <p className="control">
-                  <button className="button is-primary" type="submit">
+                  <button
+                    className="button is-primary"
+                    type="submit"
+                    onClick={e => {
+                      alert("Functionality not yet implemented! :(")
+                      e.preventDefault()
+                    }}
+                  >
                     Submit
                   </button>
                 </p>
