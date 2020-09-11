@@ -26,4 +26,4 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Skill", name: "skill", widget: "string" }
-      - { label: "Rating", name: "rating", widget: "number", value_type: "int", min: "0", max: "100" }
+      - { label: "Rating", name: "rating", widget: "number", value_type: "int", min: 0, max: 100 }
