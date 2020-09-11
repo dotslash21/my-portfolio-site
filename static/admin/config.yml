@@ -25,5 +25,5 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Skill", name: "skill", widget: "string" }
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Rating", name: "rating", widget: "number", value_type: "int", min: 0, max: 100 }
