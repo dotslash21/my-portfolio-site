@@ -16,6 +16,6 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Preview link", name: "preview_link", widget: "string" }
-      - { label: "Code link", name: "code_link", widget: "string" }
-      - { lavel: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Preview link", name: "preview_link", widget: "string", default: null }
+      - { label: "Code link", name: "code_link", widget: "string", default: null }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
