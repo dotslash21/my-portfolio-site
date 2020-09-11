@@ -22,8 +22,8 @@ const Projects = () => {
               code_link
               thumbnail {
                 childImageSharp {
-                  fixed(width: 500, height: 375) {
-                    ...GatsbyImageSharpFixed
+                  fluid(maxWidth: 500) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -45,7 +45,7 @@ const Projects = () => {
           {data.allFile.nodes.map(item => (
             <div className="column is-one-quarter" key={item.childMarkdownRemark.id}>
               <ProjectItem
-                image={item.childMarkdownRemark.frontmatter.thumbnail.childImageSharp.fixed.src}
+                image={item.childMarkdownRemark.frontmatter.thumbnail.childImageSharp.fluid}
                 title={item.childMarkdownRemark.frontmatter.title}
                 description={item.childMarkdownRemark.frontmatter.description}
                 preview={item.childMarkdownRemark.frontmatter.preview_link}

@@ -1,14 +1,25 @@
 import React from "react"
 import { FaEye, FaCode } from "react-icons/fa"
+import Img from "gatsby-image"
 
 const ProjectItem = ({ image, title, description, preview, code }) => {
   return (
     <div>
       <div className="card">
         <div className="card-image">
-          <figure className="image is-4by3">
-            <img src={image} alt={title} />
-          </figure>
+          <Img
+            fluid={image}
+            alt={title}
+            style={{
+              display: "block",
+              position: "relative",
+            }}
+            imgStyle={{
+              display: "block",
+              height: "17.3em",
+              width: "100%",
+            }}
+          />
         </div>
         <div className="card-content">
           <p className="title">{title}</p>
