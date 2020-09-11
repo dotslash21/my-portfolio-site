@@ -19,3 +19,11 @@ collections:
       - { label: "Preview link", name: "preview_link", widget: "string", required: false, default: null }
       - { label: "Code link", name: "code_link", widget: "string", required: false, default: null }
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+  - label: "Skill"
+    name: "skill"
+    folder: "content/skill"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Skill", name: "skill", widget: "string" }
+      - { label: "Rating", name: "rating", widget: "number", value_type: "int", min: "0", max: "100" }
