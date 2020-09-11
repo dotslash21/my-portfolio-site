@@ -1,7 +1,34 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+
 import SkillItem from "./SkillItem"
 
 const Skills = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allFile(
+        filter: {
+          internal: { mediaType: { eq: "text/markdown" } }
+          sourceInstanceName: { eq: "skill" }
+        }
+        sort: {
+          fields: childMarkdownRemark___frontmatter___rating
+          order: DESC
+        }
+      ) {
+        nodes {
+          childMarkdownRemark {
+            frontmatter {
+              title
+              rating
+            }
+            id
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <section id="skills" className="pt-6 pb-6">
       <div className="container">
@@ -9,30 +36,17 @@ const Skills = () => {
           My Skillset
         </h2>
 
-        <div className="columns is-multiline">
-          <div className="column is-one-quarter">
-            <SkillItem skill="C++" rating="75" />
-          </div>
-
-          <div className="column is-one-quarter">
-            <SkillItem skill="Java" rating="65" />
-          </div>
-
-          <div className="column is-one-quarter">
-            <SkillItem skill="Python" rating="65" />
-          </div>
-
-          <div className="column is-one-quarter">
-            <SkillItem skill="Backend Development" rating="75" />
-          </div>
-
-          <div className="column is-one-quarter">
-            <SkillItem skill="Frontend Development" rating="65" />
-          </div>
-
-          <div className="column is-one-quarter">
-            <SkillItem skill="Machine Learning" rating="60" />
-          </div>
+        <div className="columns is-centered is-multiline">
+          {data.allFile.nodes.map(item => {
+            return (
+              <div className="column is-one-quarter">
+                <SkillItem
+                  skill={item.childMarkdownRemark.frontmatter.title}
+                  rating={item.childMarkdownRemark.frontmatter.rating}
+                />
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>
