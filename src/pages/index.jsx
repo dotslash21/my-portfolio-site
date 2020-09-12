@@ -19,7 +19,7 @@ export default function Home({ data }) {
         socialLinks={data.site.siteMetadata.socialLinks}
       />
       <About
-        image={data.file.childImageSharp.fixed}
+        image={data.file.childImageSharp.fluid}
         bio={data.site.siteMetadata.bio}
       />
       <Projects />
@@ -53,8 +53,8 @@ export const query = graphql`
     }
     file(relativePath: { eq: "images/headshot.jpg" }) {
       childImageSharp {
-        fixed(width: 250, height: 250) {
-          ...GatsbyImageSharpFixed
+        fluid(maxWidth: 250, maxHeight: 250) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
