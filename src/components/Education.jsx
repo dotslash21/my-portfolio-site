@@ -1,6 +1,25 @@
 import React from "react"
 
+import { useWindowSize } from "../utils/custom_hooks"
+
+/**
+ * Return the bulma-timeline css classes according to the current viewport size.
+ * @param {Currrent viewport dimentions} size 
+ */
+const getTimelineClasses = (size) => {
+  let timelineClasses = "timeline px-6"
+
+  if (size.width > 480) {
+    timelineClasses += " is-centered"
+  }
+
+  return timelineClasses
+}
+
 const Education = () => {
+  // Get the current viewport size
+  const size = useWindowSize()
+
   return (
     <section id="education" className="has-background-white-ter pt-6 pb-6">
       <div className="container is-widescreen">
@@ -8,7 +27,7 @@ const Education = () => {
           My Education
         </h2>
 
-        <div className="timeline is-centered">
+        <div className={getTimelineClasses(size)}>
           <header className="timeline-header">
             <span className="tag is-medium is-primary">Present</span>
           </header>

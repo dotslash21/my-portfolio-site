@@ -3,22 +3,37 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 import SocialMenu from "./SocialLinks"
 
 const Hero = ({ title, subtitle, resumeLink, socialLinks }) => {
+  const [isActive, setisActive] = React.useState(false)
+
   return (
     <section id="hero" className="hero is-fullheight is-primary">
       <div className="hero-head">
         <nav className="navbar">
           <div className="container">
             <div className="navbar-brand">
-              <span
-                className="navbar-burger burger"
-                data-target="navbarMenuHeroC"
+              <a
+                href="/"
+                role="button"
+                aria-label="menu"
+                aria-expanded="false"
+                data-target="navbarMenuHero"
+                className={`navbar-burger burger ${
+                  isActive ? "is-active" : ""
+                }`}
+                onClick={e => {
+                  setisActive(!isActive)
+                  e.preventDefault()
+                }}
               >
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
             </div>
-            <nav id="navbarMenuHeroC" className="navbar-menu">
+            <nav
+              id="navbarMenuHero"
+              className={`navbar-menu ${isActive ? "is-active" : ""}`}
+            >
               <div className="navbar-end">
                 <a
                   className="navbar-item"
@@ -78,33 +93,29 @@ const Hero = ({ title, subtitle, resumeLink, socialLinks }) => {
 
       <div className="hero-body">
         <div className="container">
-          <h1 className="title is-uppercase is-size-1">
+          <h1 className="title is-uppercase is-size-1 is-size-3-touch is-size-3-mobile">
             {title || `John Smith`}
           </h1>
-          <h2 className="subtitle is-capitalized is-size-3">
+          <h2 className="subtitle is-capitalized is-size-3 is-size-5-touch is-size-5-mobile">
             {subtitle || `The Developer`}
           </h2>
-          <div className="field is-grouped">
+          <div className="buttons are-medium">
             {resumeLink && (
-              <p className="control">
-                <a
-                  className="button is-link is-inverted is-outlined is-large"
-                  href={resumeLink}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Download Resume
-                </a>
-              </p>
-            )}
-            <p className="control">
-              <button
-                className="button is-inverted has-text-primary is-large"
-                onClick={() => scrollTo("#contact")}
+              <a
+                className="button is-link is-inverted is-outlined"
+                href={resumeLink}
+                target="_blank"
+                rel="noreferrer"
               >
-                Hire Me
-              </button>
-            </p>
+                Download Resume
+              </a>
+            )}
+            <button
+              className="button is-inverted has-text-primary"
+              onClick={() => scrollTo("#contact")}
+            >
+              Hire Me
+            </button>
           </div>
         </div>
       </div>

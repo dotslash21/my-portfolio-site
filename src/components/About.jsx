@@ -5,16 +5,19 @@ const About = ({ image, bio }) => {
   return (
     <section id="about" className="pt-6 pb-6">
       <div className="container is-widescreen">
-        <h2 className="is-size-1 has-text-weight-bold has-text-centered mb-6">About Me</h2>
+        <h2 className="is-size-1 has-text-weight-bold has-text-centered mb-6">
+          About Me
+        </h2>
         <div className="columns is-vcentered is-centered">
-          <div className="column is-narrow">
+          <div className="column is-narrow px-6">
             <Img
-              className="rounded"
-              fixed={image}
+              fluid={image}
               alt="Portrait"
               style={{
+                margin: "auto",
                 display: "block",
                 position: "relative",
+                width: "21em",
               }}
               imgStyle={{
                 display: "block",
@@ -25,8 +28,8 @@ const About = ({ image, bio }) => {
             />
           </div>
 
-          <div className="column is-half">
-            <p className="is-size-3 has-text-justified ml-6">{bio}</p>
+          <div className="column is-half px-6">
+            <p className="is-size-3 has-text-justified">{bio}</p>
           </div>
         </div>
       </div>

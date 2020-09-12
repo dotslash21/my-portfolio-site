@@ -7,65 +7,57 @@ const SocialMenu = ({ socialLinks, isInverted = true }) => {
   } is-outlined is-medium`
 
   return (
-    <div className="field is-grouped">
+    <div className="buttons">
       {socialLinks.github && (
-        <p className="control">
-          <a
-            className={buttonClasses}
-            href={socialLinks.github}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="icon is-medium">
-              <FaGithub className="is-size-1" />
-            </span>
-          </a>
-        </p>
+        <a
+          className={buttonClasses}
+          href={socialLinks.github}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="icon is-medium">
+            <FaGithub className="is-size-1" />
+          </span>
+        </a>
       )}
 
       {socialLinks.linkedin && (
-        <p className="control">
-          <a
-            className={buttonClasses}
-            href={socialLinks.linkedin}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="icon is-medium">
-              <FaLinkedinIn className="is-size-1" />
-            </span>
-          </a>
-        </p>
+        <a
+          className={buttonClasses}
+          href={socialLinks.linkedin}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="icon is-medium">
+            <FaLinkedinIn className="is-size-1" />
+          </span>
+        </a>
       )}
 
       {socialLinks.facebook && (
-        <p className="control">
-          <a
-            className={buttonClasses}
-            href={socialLinks.facebook}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="icon is-medium">
-              <FaFacebook className="is-size-1" />
-            </span>
-          </a>
-        </p>
+        <a
+          className={buttonClasses}
+          href={socialLinks.facebook}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="icon is-medium">
+            <FaFacebook className="is-size-1" />
+          </span>
+        </a>
       )}
 
       {socialLinks.twitter && (
-        <p className="control">
-          <a
-            className={buttonClasses}
-            href={socialLinks.twitter}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <span className="icon is-medium">
-              <FaTwitter className="is-size-1" />
-            </span>
-          </a>
-        </p>
+        <a
+          className={buttonClasses}
+          href={socialLinks.twitter}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span className="icon is-medium">
+            <FaTwitter className="is-size-1" />
+          </span>
+        </a>
       )}
     </div>
   )

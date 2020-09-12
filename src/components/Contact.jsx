@@ -11,7 +11,7 @@ const Contact = ({ email, socialLinks }) => {
 
         <div className="columns is-centered">
           {(email || socialLinks) && (
-            <div className="column is-one-quarter">
+            <div className="column is-narrow px-6">
               {email && (
                 <>
                   <h3 className="is-size-2">E-Mail me at</h3>
@@ -23,14 +23,14 @@ const Contact = ({ email, socialLinks }) => {
 
               {socialLinks && (
                 <>
-                  <h3 className="is-size-2 mt-6 mb-3">Connect with me</h3>
+                  <h3 className="is-size-2">Connect with me</h3>
                   <SocialMenu socialLinks={socialLinks} isInverted={false} />
                 </>
               )}
             </div>
           )}
 
-          <div className="column is-narrow">
+          <div className="column is-narrow px-6">
             <h3 className="is-size-2 mb-3">Feel free to drop a message</h3>
             <form>
               <div className="field">
