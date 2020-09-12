@@ -78,13 +78,13 @@ const Hero = ({ title, subtitle, resumeLink, socialLinks }) => {
 
       <div className="hero-body">
         <div className="container">
-          <h1 className="title is-uppercase is-size-1">
+          <h1 className="title is-uppercase is-size-1 is-size-3-touch is-size-3-mobile">
             {title || `John Smith`}
           </h1>
-          <h2 className="subtitle is-capitalized is-size-3">
+          <h2 className="subtitle is-capitalized is-size-3 is-size-5-touch is-size-5-mobile">
             {subtitle || `The Developer`}
           </h2>
-          <div className="buttons are-large">
+          <div className="buttons are-medium">
             {resumeLink && (
               <a
                 className="button is-link is-inverted is-outlined"
