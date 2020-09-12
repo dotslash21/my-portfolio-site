@@ -39,7 +39,7 @@ const Skills = () => {
         <div className="columns is-centered is-multiline">
           {data.allFile.nodes.map(item => {
             return (
-              <div className="column is-one-quarter" key={item.childMarkdownRemark.id}>
+              <div className="column is-one-quarter px-6" key={item.childMarkdownRemark.id}>
                 <SkillItem
                   skill={item.childMarkdownRemark.frontmatter.title}
                   rating={item.childMarkdownRemark.frontmatter.rating}
