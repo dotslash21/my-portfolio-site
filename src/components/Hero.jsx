@@ -84,27 +84,23 @@ const Hero = ({ title, subtitle, resumeLink, socialLinks }) => {
           <h2 className="subtitle is-capitalized is-size-3">
             {subtitle || `The Developer`}
           </h2>
-          <div className="field is-grouped">
+          <div className="buttons are-large">
             {resumeLink && (
-              <p className="control">
-                <a
-                  className="button is-link is-inverted is-outlined is-large"
-                  href={resumeLink}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Download Resume
-                </a>
-              </p>
-            )}
-            <p className="control">
-              <button
-                className="button is-inverted has-text-primary is-large"
-                onClick={() => scrollTo("#contact")}
+              <a
+                className="button is-link is-inverted is-outlined"
+                href={resumeLink}
+                target="_blank"
+                rel="noreferrer"
               >
-                Hire Me
-              </button>
-            </p>
+                Download Resume
+              </a>
+            )}
+            <button
+              className="button is-inverted has-text-primary"
+              onClick={() => scrollTo("#contact")}
+            >
+              Hire Me
+            </button>
           </div>
         </div>
       </div>
