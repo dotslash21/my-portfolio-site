@@ -7,7 +7,7 @@ import { useWindowSize } from "../utils/custom_hooks"
  * @param {Currrent viewport dimentions} size 
  */
 const getTimelineClasses = (size) => {
-  let timelineClasses = "timeline"
+  let timelineClasses = "timeline px-6"
 
   if (size.width > 480) {
     timelineClasses += " is-centered"
