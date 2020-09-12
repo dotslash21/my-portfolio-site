@@ -3,22 +3,37 @@ import scrollTo from "gatsby-plugin-smoothscroll"
 import SocialMenu from "./SocialLinks"
 
 const Hero = ({ title, subtitle, resumeLink, socialLinks }) => {
+  const [isActive, setisActive] = React.useState(false)
+
   return (
     <section id="hero" className="hero is-fullheight is-primary">
       <div className="hero-head">
         <nav className="navbar">
           <div className="container">
             <div className="navbar-brand">
-              <span
-                className="navbar-burger burger"
-                data-target="navbarMenuHeroC"
+              <a
+                href="/"
+                role="button"
+                aria-label="menu"
+                aria-expanded="false"
+                data-target="navbarMenuHero"
+                className={`navbar-burger burger ${
+                  isActive ? "is-active" : ""
+                }`}
+                onClick={e => {
+                  setisActive(!isActive)
+                  e.preventDefault()
+                }}
               >
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+              </a>
             </div>
-            <nav id="navbarMenuHeroC" className="navbar-menu">
+            <nav
+              id="navbarMenuHero"
+              className={`navbar-menu ${isActive ? "is-active" : ""}`}
+            >
               <div className="navbar-end">
                 <a
                   className="navbar-item"
