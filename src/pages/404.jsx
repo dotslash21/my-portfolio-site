@@ -1,9 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import SEO from "../components/SEO"
+
 const NotFoundPage = () => {
   return (
     <section className="hero is-primary is-fullheight">
+      <SEO title="Not Found!" />
       <div className="hero-body">
         <div className="container has-text-centered">
           <p className="title is-uppercase is-size-1 is-size-3-touch is-size-3-mobile">
