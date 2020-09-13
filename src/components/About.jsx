@@ -17,7 +17,8 @@ const About = ({ image, bio }) => {
                 margin: "auto",
                 display: "block",
                 position: "relative",
-                width: "21em",
+                width: "20em",
+                maxWidth: "100%",
               }}
               imgStyle={{
                 display: "block",
