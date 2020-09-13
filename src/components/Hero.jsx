@@ -1,5 +1,6 @@
 import React from "react"
 import scrollTo from "gatsby-plugin-smoothscroll"
+
 import SocialMenu from "./SocialLinks"
 
 const Hero = ({ title, subtitle, resumeLink, socialLinks }) => {

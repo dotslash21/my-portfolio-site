@@ -9,25 +9,29 @@ import Education from "../components/Education"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
 
+import contact_info from "../../content/profile/contact_info.json"
+import personal_info from "../../content/profile/personal_info.json"
+import social_info from "../../content/profile/social_info.json"
+
 export default function Home({ data }) {
   return (
     <>
       <Hero
-        title={data.site.siteMetadata.name}
-        subtitle={data.site.siteMetadata.role}
-        resumeLink={data.site.siteMetadata.resumeLink}
-        socialLinks={data.site.siteMetadata.socialLinks}
+        title={personal_info.name}
+        subtitle={personal_info.role}
+        resumeLink={personal_info.resumeLink}
+        socialLinks={social_info}
       />
       <About
         image={data.file.childImageSharp.fluid}
-        bio={data.site.siteMetadata.bio}
+        bio={personal_info.bio}
       />
       <Projects />
       <Skills />
       <Education />
       <Contact
-        email={data.site.siteMetadata.email}
-        socialLinks={data.site.siteMetadata.socialLinks}
+        email={contact_info.email}
+        socialLinks={social_info}
       />
       <Footer />
     </>
@@ -36,21 +40,6 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query {
-    site {
-      siteMetadata {
-        name
-        role
-        bio
-        email
-        resumeLink
-        socialLinks {
-          github
-          linkedin
-          facebook
-          twitter
-        }
-      }
-    }
     file(relativePath: { eq: "images/headshot.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 250, maxHeight: 250) {
