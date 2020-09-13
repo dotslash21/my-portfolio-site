@@ -19,6 +19,7 @@ collections:
       - { label: "Preview link", name: "preview_link", widget: "string", required: false, default: null }
       - { label: "Code link", name: "code_link", widget: "string", required: false, default: null }
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+
   - label: "Skill"
     name: "skill"
     folder: "content/skill"
@@ -28,3 +29,32 @@ collections:
       - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Rating", name: "rating", widget: "number", value_type: "int", min: 0, max: 100 }
+
+  - label: "Profile"
+    name: "profile"
+    files:
+      - label: "Personal Info"
+        name: "personal_info"
+        file: "content/profile/personal_info.json"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Role", name: "role", widget: "string"}
+          - {label: "Bio", name: "bio", widget: "text"}
+          - {label: "Resume Link", name: "resume_link", widget: "string"}
+
+      - label: "Contact Info"
+        name: "contact_info"
+        file: "content/profile/contact_info.json"
+        fields:
+          - {label: "Primary Email", name: "primary_email", widget: "string"}
+          - {label: "Secondary Email", name: "secondary_email", widget: "string", required: false, default: null}
+          - {label: "Mobile", name: "mobile", widget: "string", required: false, default: null}
+
+      - label: "Social Info"
+        name: "social_info"
+        file: "content/profile/social_info.json"
+        fields:
+          - {label: "GitHub", name: "github", widget: "string", required: false, default: null}
+          - {label: "LinkedIn", name: "linkedin", widget: "string", required: false, default: null}
+          - {label: "Facebook", name: "facebook", widget: "string", required: false, default: null}
+          - {label: "Twitter", name: "twitter", widget: "string", required: false, default: null}
