@@ -31,30 +31,30 @@ collections:
       - { label: "Rating", name: "rating", widget: "number", value_type: "int", min: 0, max: 100 }
 
   - label: "Profile Data"
-      name: "profile_data"
-      files:
-        - label: "Personal Info"
-          name: "personal_info"
-          file: "content/profile/personal_info.json"
-          fields:
-            - {label: "Name", name: "name", widget: "string"}
-            - {label: "Role", name: "role", widget: "string"}
-            - {label: "Bio", name: "bio", widget: "text"}
-            - {label: "Resume Link", name: "resume_link", widget: "string"}
+    name: "profile_data"
+    files:
+      - label: "Personal Info"
+        name: "personal_info"
+        file: "content/profile/personal_info.json"
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Role", name: "role", widget: "string"}
+          - {label: "Bio", name: "bio", widget: "text"}
+          - {label: "Resume Link", name: "resume_link", widget: "string"}
 
-        - label: "Contact Info"
-          name: "contact_info"
-          file: "content/profile/contact_info.json"
-          fields:
-            - {label: "Primary Email", name: "primary_email", widget: "string"}
-            - {label: "Secondary Email", name: "secondary_email", widget: "string"}
-            - {label: "Mobile", name: "mobile", widget: "string"}
+      - label: "Contact Info"
+        name: "contact_info"
+        file: "content/profile/contact_info.json"
+        fields:
+          - {label: "Primary Email", name: "primary_email", widget: "string"}
+          - {label: "Secondary Email", name: "secondary_email", widget: "string"}
+          - {label: "Mobile", name: "mobile", widget: "string"}
 
-        - label: "Social Info"
-          name: "social_info"
-          file: "content/profile/social_info.json"
-          fields:
-            - {label: "GitHub", name: "github", widget: "string"}
-            - {label: "LinkedIn", name: "linkedin", widget: "string"}
-            - {label: "Facebook", name: "facebook", widget: "string"}
-            - {label: "Twitter", name: "twitter", widget: "string"}
+      - label: "Social Info"
+        name: "social_info"
+        file: "content/profile/social_info.json"
+        fields:
+          - {label: "GitHub", name: "github", widget: "string"}
+          - {label: "LinkedIn", name: "linkedin", widget: "string"}
+          - {label: "Facebook", name: "facebook", widget: "string"}
+          - {label: "Twitter", name: "twitter", widget: "string"}
