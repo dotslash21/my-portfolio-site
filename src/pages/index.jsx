@@ -30,7 +30,7 @@ export default function Home({ data }) {
       <Skills />
       <Education />
       <Contact
-        email={contact_info.email}
+        email={contact_info.primary_email}
         socialLinks={social_info}
       />
       <Footer />
