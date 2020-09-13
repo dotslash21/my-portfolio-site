@@ -8,6 +8,7 @@ import Skills from "../components/Skills"
 import Education from "../components/Education"
 import Contact from "../components/Contact"
 import Footer from "../components/Footer"
+import SEO from "../components/SEO"
 
 import contact_info from "../../content/profile/contact_info.json"
 import personal_info from "../../content/profile/personal_info.json"
@@ -16,6 +17,7 @@ import social_info from "../../content/profile/social_info.json"
 export default function Home({ data }) {
   return (
     <>
+      <SEO title="Home" />
       <Hero
         title={personal_info.name}
         subtitle={personal_info.role}

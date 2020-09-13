@@ -5,6 +5,14 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `Arunangshu Biswas - A Full Stack Developer`,
+    description: `Final Year CSE Undergraduate, Full Stack Developer, Android Developer and ML/DL Enthusiast`,
+    author: `Arunangshu Biswas (arunangshubsws@gmail.com)`,
+    twitterUsername: `@arunangshubsws`,
+    image: `/website-thumbnail.png`,
+    siteUrl: `https://arunangshu.xyz`,
+  },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-plugin-smoothscroll`,
@@ -40,5 +48,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-react-helmet`,
   ],
 }
