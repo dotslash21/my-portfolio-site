@@ -47,14 +47,14 @@ collections:
         file: "content/profile/contact_info.json"
         fields:
           - {label: "Primary Email", name: "primary_email", widget: "string"}
-          - {label: "Secondary Email", name: "secondary_email", widget: "string"}
-          - {label: "Mobile", name: "mobile", widget: "string"}
+          - {label: "Secondary Email", name: "secondary_email", widget: "string", required: false, default: null}
+          - {label: "Mobile", name: "mobile", widget: "string", required: false, default: null}
 
       - label: "Social Info"
         name: "social_info"
         file: "content/profile/social_info.json"
         fields:
-          - {label: "GitHub", name: "github", widget: "string"}
-          - {label: "LinkedIn", name: "linkedin", widget: "string"}
-          - {label: "Facebook", name: "facebook", widget: "string"}
-          - {label: "Twitter", name: "twitter", widget: "string"}
+          - {label: "GitHub", name: "github", widget: "string", required: false, default: null}
+          - {label: "LinkedIn", name: "linkedin", widget: "string", required: false, default: null}
+          - {label: "Facebook", name: "facebook", widget: "string", required: false, default: null}
+          - {label: "Twitter", name: "twitter", widget: "string", required: false, default: null}
