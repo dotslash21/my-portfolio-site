@@ -19,7 +19,7 @@ export default function Home({ data }) {
       <Hero
         title={personal_info.name}
         subtitle={personal_info.role}
-        resumeLink={personal_info.resumeLink}
+        resumeLink={personal_info.resume_link}
         socialLinks={social_info}
       />
       <About
