@@ -39,6 +39,7 @@ const Contact = ({ email, socialLinks }) => {
                 </label>
                 <div className="control">
                   <input
+                    id="name"
                     type="text"
                     name="name"
                     className="input"
@@ -53,6 +54,7 @@ const Contact = ({ email, socialLinks }) => {
                 </label>
                 <div className="control">
                   <input
+                    id="email"
                     type="email"
                     name="email"
                     className="input"
@@ -67,6 +69,7 @@ const Contact = ({ email, socialLinks }) => {
                 </label>
                 <div className="control">
                   <textarea
+                    id="message"
                     name="message"
                     className="textarea"
                     placeholder="Please leave your message here"
