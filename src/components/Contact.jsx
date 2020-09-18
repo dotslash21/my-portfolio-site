@@ -4,14 +4,14 @@ import SocialMenu from "./SocialLinks"
 const Contact = ({ email, socialLinks }) => {
   return (
     <section id="contact" className="pt-6 pb-6">
-      <div className="container">
+      <div className="container px-5">
         <h2 className="is-size-1 has-text-weight-bold has-text-centered mb-6">
           Contact Me
         </h2>
 
         <div className="columns is-centered">
           {(email || socialLinks) && (
-            <div className="column is-narrow px-6">
+            <div className="column is-one-quarter">
               {email && (
                 <>
                   <h3 className="is-size-2">E-Mail me at</h3>
@@ -30,8 +30,8 @@ const Contact = ({ email, socialLinks }) => {
             </div>
           )}
 
-          <div className="column is-narrow px-6">
-            <h3 className="is-size-2 mb-3">Feel free to drop a message</h3>
+          <div className="column is-one-quarter">
+            <h3 className="is-size-2 mb-3">Drop a message</h3>
             <form>
               <div className="field">
                 <label htmlFor="name" className="label">

@@ -31,7 +31,7 @@ const Skills = () => {
 
   return (
     <section id="skills" className="pt-6 pb-6">
-      <div className="container">
+      <div className="container px-5">
         <h2 className="is-size-1 has-text-weight-bold has-text-centered mb-6">
           My Skillset
         </h2>
@@ -39,7 +39,7 @@ const Skills = () => {
         <div className="columns is-centered is-multiline">
           {data.allFile.nodes.map(item => {
             return (
-              <div className="column is-one-quarter px-6" key={item.childMarkdownRemark.id}>
+              <div className="column is-one-quarter" key={item.childMarkdownRemark.id}>
                 <SkillItem
                   skill={item.childMarkdownRemark.frontmatter.title}
                   rating={item.childMarkdownRemark.frontmatter.rating}
