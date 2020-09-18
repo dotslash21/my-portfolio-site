@@ -36,7 +36,7 @@ const Projects = () => {
 
   return (
     <section id="projects" className="has-background-white-ter pt-6 pb-6">
-      <div className="container">
+      <div className="container px-5">
         <h2 className="is-size-1 has-text-weight-bold has-text-centered mb-6">
           My Projects
         </h2>

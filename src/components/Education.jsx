@@ -7,7 +7,7 @@ import { useWindowSize } from "../utils/custom_hooks"
  * @param {Currrent viewport dimentions} size 
  */
 const getTimelineClasses = (size) => {
-  let timelineClasses = "timeline px-6"
+  let timelineClasses = "timeline"
 
   if (size.width > 480) {
     timelineClasses += " is-centered"
@@ -22,7 +22,7 @@ const Education = () => {
 
   return (
     <section id="education" className="has-background-white-ter pt-6 pb-6">
-      <div className="container is-widescreen">
+      <div className="container px-5">
         <h2 className="is-size-1 has-text-weight-bold has-text-centered mb-6">
           My Education
         </h2>
