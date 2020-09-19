@@ -42,7 +42,7 @@ export default function Home({ data }) {
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "images/headshot.jpg" }) {
+    file(relativePath: { eq: "images/headshot.webp" }) {
       childImageSharp {
         fluid(maxWidth: 250, maxHeight: 250) {
           ...GatsbyImageSharpFluid

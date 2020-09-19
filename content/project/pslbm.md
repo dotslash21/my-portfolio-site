@@ -5,5 +5,5 @@ description: A low cost, portable, and smartphone operated distress beacon for
   connectivity.
 preview_link: ""
 code_link: https://github.com/dotslash21/HelpME
-thumbnail: /assets/images/pslbm_preview.png
+thumbnail: /assets/images/pslbm_preview.webp
 ---
