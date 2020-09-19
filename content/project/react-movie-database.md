@@ -5,5 +5,5 @@ description: A website made with ReactJS where a user can get info on a movie
   (themoviedb.org).
 preview_link: http://dotslash21.cf/rmdb/
 code_link: https://github.com/dotslash21/react_movie_db
-thumbnail: /assets/images/rmdb_preview.png
+thumbnail: /assets/images/rmdb_preview.webp
 ---
