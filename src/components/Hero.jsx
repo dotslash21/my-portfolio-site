@@ -103,7 +103,7 @@ const Hero = ({ title, subtitle, resumeLink, socialLinks }) => {
           <div className="buttons are-medium">
             {resumeLink && (
               <a
-                className="button is-link is-inverted is-outlined has-text-weight-semibold"
+                className="button is-primary is-inverted is-outlined has-text-weight-semibold"
                 href={resumeLink}
                 target="_blank"
                 rel="noreferrer"
