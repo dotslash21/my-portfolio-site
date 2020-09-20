@@ -30,6 +30,7 @@ const ProjectItem = ({ image, title, description, preview, code }) => {
           {preview && (
             <a
               href={preview}
+              aria-label="Link to the preview"
               className="card-footer-item"
               target="_blank"
               rel="noreferrer"
@@ -40,6 +41,7 @@ const ProjectItem = ({ image, title, description, preview, code }) => {
           {code && (
             <a
               href={code}
+              aria-label="Link to the code"
               className="card-footer-item"
               target="_blank"
               rel="noreferrer"

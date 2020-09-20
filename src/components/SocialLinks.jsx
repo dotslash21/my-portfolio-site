@@ -2,7 +2,7 @@ import React from "react"
 import { FaGithub, FaLinkedinIn, FaFacebook, FaTwitter } from "react-icons/fa"
 
 const SocialMenu = ({ socialLinks, isInverted = true }) => {
-  const buttonClasses = `button is-link ${
+  const buttonClasses = `button is-info ${
     isInverted ? "is-inverted" : ""
   } is-outlined is-medium`
 
@@ -12,6 +12,7 @@ const SocialMenu = ({ socialLinks, isInverted = true }) => {
         <a
           className={buttonClasses}
           href={socialLinks.github}
+          aria-label="GitHub"
           target="_blank"
           rel="noreferrer"
         >
@@ -25,6 +26,7 @@ const SocialMenu = ({ socialLinks, isInverted = true }) => {
         <a
           className={buttonClasses}
           href={socialLinks.linkedin}
+          aria-label="LinkedIn"
           target="_blank"
           rel="noreferrer"
         >
@@ -38,6 +40,7 @@ const SocialMenu = ({ socialLinks, isInverted = true }) => {
         <a
           className={buttonClasses}
           href={socialLinks.facebook}
+          aria-label="Facebook"
           target="_blank"
           rel="noreferrer"
         >
@@ -51,6 +54,7 @@ const SocialMenu = ({ socialLinks, isInverted = true }) => {
         <a
           className={buttonClasses}
           href={socialLinks.twitter}
+          aria-label="Twitter"
           target="_blank"
           rel="noreferrer"
         >

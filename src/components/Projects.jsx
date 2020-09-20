@@ -35,7 +35,7 @@ const Projects = () => {
   `)
 
   return (
-    <section id="projects" className="has-background-white-ter pt-6 pb-6">
+    <section id="projects" className="has-background-grey-lighter pt-6 pb-6">
       <div className="container px-5">
         <h2 className="is-size-1 has-text-weight-bold has-text-centered mb-6">
           My Projects
@@ -43,9 +43,15 @@ const Projects = () => {
 
         <div className="columns is-centered is-multiline">
           {data.allFile.nodes.map(item => (
-            <div className="column is-one-quarter" key={item.childMarkdownRemark.id}>
+            <div
+              className="column is-one-quarter"
+              key={item.childMarkdownRemark.id}
+            >
               <ProjectItem
-                image={item.childMarkdownRemark.frontmatter.thumbnail.childImageSharp.fluid}
+                image={
+                  item.childMarkdownRemark.frontmatter.thumbnail.childImageSharp
+                    .fluid
+                }
                 title={item.childMarkdownRemark.frontmatter.title}
                 description={item.childMarkdownRemark.frontmatter.description}
                 preview={item.childMarkdownRemark.frontmatter.preview_link}

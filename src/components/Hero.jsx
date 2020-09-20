@@ -7,7 +7,7 @@ const Hero = ({ title, subtitle, resumeLink, socialLinks }) => {
   const [isActive, setisActive] = React.useState(false)
 
   return (
-    <section id="hero" className="hero is-fullheight is-primary">
+    <section id="hero" className="hero is-fullheight ubuntu-gradient">
       <div className="hero-head">
         <nav className="navbar">
           <div className="container">
@@ -103,7 +103,7 @@ const Hero = ({ title, subtitle, resumeLink, socialLinks }) => {
           <div className="buttons are-medium">
             {resumeLink && (
               <a
-                className="button is-link is-inverted is-outlined"
+                className="button is-link is-inverted is-outlined has-text-weight-semibold"
                 href={resumeLink}
                 target="_blank"
                 rel="noreferrer"
@@ -112,7 +112,7 @@ const Hero = ({ title, subtitle, resumeLink, socialLinks }) => {
               </a>
             )}
             <button
-              className="button is-inverted has-text-primary"
+              className="button is-inverted has-text-primary has-text-weight-semibold"
               onClick={() => scrollTo("#contact")}
             >
               Hire Me

@@ -4,9 +4,9 @@ import { useWindowSize } from "../utils/custom_hooks"
 
 /**
  * Return the bulma-timeline css classes according to the current viewport size.
- * @param {Currrent viewport dimentions} size 
+ * @param {Currrent viewport dimentions} size
  */
-const getTimelineClasses = (size) => {
+const getTimelineClasses = size => {
   let timelineClasses = "timeline"
 
   if (size.width > 480) {
@@ -21,7 +21,7 @@ const Education = () => {
   const size = useWindowSize()
 
   return (
-    <section id="education" className="has-background-white-ter pt-6 pb-6">
+    <section id="education" className="has-background-grey-lighter pt-6 pb-6">
       <div className="container px-5">
         <h2 className="is-size-1 has-text-weight-bold has-text-centered mb-6">
           My Education
@@ -33,7 +33,7 @@ const Education = () => {
           </header>
 
           <div className="timeline-item is-primary">
-            <div className="timeline-marker is-primary"></div>
+            <div className="timeline-marker is-info"></div>
             <div className="timeline-content">
               <p className="heading">2017-2021</p>
               <p className="title">
@@ -47,7 +47,7 @@ const Education = () => {
           </div>
 
           <div className="timeline-item is-primary">
-            <div className="timeline-marker is-primary"></div>
+            <div className="timeline-marker is-info"></div>
             <div className="timeline-content">
               <p className="heading">2014-2016</p>
               <p className="title">Hirendra Leela Patranavs School</p>
@@ -57,7 +57,7 @@ const Education = () => {
           </div>
 
           <div className="timeline-item is-primary">
-            <div className="timeline-marker is-primary"></div>
+            <div className="timeline-marker is-info"></div>
             <div className="timeline-content">
               <p className="heading">2004-2014</p>
               <p className="title">Hirendra Leela Patranavs School</p>
