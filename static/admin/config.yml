@@ -73,4 +73,4 @@ collections:
       - { label: "Field of study", name: "field", widget: "string" }
       - { label: "Grade", name: "grade", widget: "number", valueType: "float", min: 0 }
       - { label: "Max grade", name: "max_grade", widget: "number", valueType: "float", min: 0 }
-      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Description", name: "description", widget: "text", required: false }
