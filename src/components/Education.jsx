@@ -1,6 +1,8 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 
 import { useWindowSize } from "../utils/custom_hooks"
+import EducationItem from "./EducationItem"
 
 /**
  * Return the bulma-timeline css classes according to the current viewport size.
@@ -20,6 +22,37 @@ const Education = () => {
   // Get the current viewport size
   const size = useWindowSize()
 
+  // Get the education entities
+  const data = useStaticQuery(graphql`
+    {
+      allFile(
+        filter: {
+          internal: { mediaType: { eq: "text/markdown" } }
+          sourceInstanceName: { eq: "education" }
+        }
+        sort: {
+          fields: childMarkdownRemark___frontmatter___start_year
+          order: DESC
+        }
+      ) {
+        nodes {
+          childMarkdownRemark {
+            frontmatter {
+              start_year
+              end_year
+              institution
+              degree
+              field
+              grade
+              max_grade
+            }
+            id
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <section id="education" className="has-background-grey-lighter pt-6 pb-6">
       <div className="container px-5">
@@ -32,39 +65,20 @@ const Education = () => {
             <span className="tag is-medium is-primary">Present</span>
           </header>
 
-          <div className="timeline-item is-primary">
-            <div className="timeline-marker is-info"></div>
-            <div className="timeline-content">
-              <p className="heading">2017-2021</p>
-              <p className="title">
-                Govt. College of Engineering and Textile Technology, Berhampore
-              </p>
-              <p className="subtitle is-4">
-                B.Tech in Computer Science and Engineering
-              </p>
-              <p className="subtitle">Grade: 8.2/10</p>
-            </div>
-          </div>
-
-          <div className="timeline-item is-primary">
-            <div className="timeline-marker is-info"></div>
-            <div className="timeline-content">
-              <p className="heading">2014-2016</p>
-              <p className="title">Hirendra Leela Patranavs School</p>
-              <p className="subtitle is-4">Higher Secondary Education</p>
-              <p className="subtitle">Grade: 84.25/100</p>
-            </div>
-          </div>
-
-          <div className="timeline-item is-primary">
-            <div className="timeline-marker is-info"></div>
-            <div className="timeline-content">
-              <p className="heading">2004-2014</p>
-              <p className="title">Hirendra Leela Patranavs School</p>
-              <p className="subtitle is-4">Secondary Education</p>
-              <p className="subtitle">Grade: 82.5/100</p>
-            </div>
-          </div>
+          {data.allFile.nodes.map(item => {
+            return (
+              <EducationItem
+                key={item.childMarkdownRemark.id}
+                startYear={item.childMarkdownRemark.frontmatter.start_year}
+                endYear={item.childMarkdownRemark.frontmatter.end_year}
+                institution={item.childMarkdownRemark.frontmatter.institution}
+                degree={item.childMarkdownRemark.frontmatter.degree}
+                field={item.childMarkdownRemark.frontmatter.field}
+                grade={item.childMarkdownRemark.frontmatter.grade}
+                maxGrade={item.childMarkdownRemark.frontmatter.max_grade}
+              />
+            )
+          })}
 
           <header className="timeline-header">
             <span className="tag is-medium is-primary">Past</span>

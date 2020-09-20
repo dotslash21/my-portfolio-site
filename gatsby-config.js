@@ -31,6 +31,10 @@ module.exports = {
       options: { name: `skill`, path: `content/skill` },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: { name: `education`, path: `content/education` },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
