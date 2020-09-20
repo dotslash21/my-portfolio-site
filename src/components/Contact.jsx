@@ -80,7 +80,7 @@ const Contact = ({ email, socialLinks }) => {
               <div className="field is-grouped is-grouped-centered">
                 <p className="control">
                   <button
-                    className="button is-primary"
+                    className="button is-success"
                     type="submit"
                     onClick={e => {
                       alert("Functionality not yet implemented! :(")
