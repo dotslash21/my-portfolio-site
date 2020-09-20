@@ -45,7 +45,7 @@ collections:
     fields:
       - { label: "Slug", name: "slug", pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$','A slug can have no spaces or special characters'], widget: "string" }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Rating", name: "rating", widget: "number", value_type: "int", min: 0, max: 100 }
+      - { label: "Rating", name: "rating", widget: "number", valueType: "int", min: 0, max: 100 }
 
   - label: "Project"
     name: "project"
@@ -66,11 +66,11 @@ collections:
     slug: "{{fields.slug}}"
     fields:
       - { label: "Slug", name: "slug", pattern: ['^[a-z0-9]+(?:-[a-z0-9]+)*$','A slug can have no spaces or special characters'], widget: "string" }
-      - { label: "Start Year", name: "start_year", widget: "number", value_type: "int", min: 0}
-      - { label: "End Year", name: "end_year", widget: "number", value_type: "int", min: 0}
+      - { label: "Start Year", name: "start_year", widget: "number", valueType: "int", min: 0}
+      - { label: "End Year", name: "end_year", widget: "number", valueType: "int", min: 0}
       - { label: "Institution", name: "institution", widget: "string" }
       - { label: "Degree", name: "degree", widget: "string" }
       - { label: "Field of study", name: "field", widget: "string" }
-      - { label: "Grade", name: "grade", widget: "number", value_type: "float", min: 0 }
-      - { label: "Max grade", name: "max_grade", widget: "number", value_type: "float", min: 0 }
+      - { label: "Grade", name: "grade", widget: "number", valueType: "float", min: 0 }
+      - { label: "Max grade", name: "max_grade", widget: "number", valueType: "float", min: 0 }
       - { label: "Description", name: "description", widget: "text" }
