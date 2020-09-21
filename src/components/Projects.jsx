@@ -22,8 +22,8 @@ const Projects = () => {
               code_link
               thumbnail {
                 childImageSharp {
-                  fluid(maxWidth: 500) {
-                    ...GatsbyImageSharpFluid
+                  fixed(width: 375, height: 281) {
+                    ...GatsbyImageSharpFixed
                   }
                 }
               }
@@ -50,7 +50,7 @@ const Projects = () => {
               <ProjectItem
                 image={
                   item.childMarkdownRemark.frontmatter.thumbnail.childImageSharp
-                    .fluid
+                    .fixed
                 }
                 title={item.childMarkdownRemark.frontmatter.title}
                 description={item.childMarkdownRemark.frontmatter.description}

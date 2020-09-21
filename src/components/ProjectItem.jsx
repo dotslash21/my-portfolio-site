@@ -8,16 +8,25 @@ const ProjectItem = ({ image, title, description, preview, code }) => {
       <div className="card">
         <div className="card-image">
           <Img
-            fluid={image}
+            fixed={image}
             alt={title}
             style={{
+              width: "100%",
               display: "block",
               position: "relative",
+              margin: "0",
+              padding: "0",
+              maxWidth: "100%",
             }}
             imgStyle={{
-              display: "block",
-              height: "17.3em",
               width: "100%",
+              bottom: "0",
+              left: "0",
+              position: "absolute",
+              right: "0",
+              top: "0",
+              display: "block",
+              maxWidth: "100%",
             }}
           />
         </div>
